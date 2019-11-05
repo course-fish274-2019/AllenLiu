@@ -1,4 +1,6 @@
 
+#Question 2 to 4 - Data and Git Setup 
+
 fish_data = read.csv("data/Gaeta_etal_CLC_data_1.csv")
 
 library(dplyr)
@@ -8,4 +10,11 @@ library(dplyr)
 fish_data_cat = fish_data %>%
   mutate(length_cat = ifelse(length > 300, "big", "small"))
 
-fich_data_cat_clean <- filter(fish_data_cat, scalelength > 1)
+fish_data_cat_clean <- filter(fish_data_cat, scalelength > 1)
+
+#Question 5 - Graph 
+library(ggplot2)
+
+ggplot(fish_data_cat_clean, aes(x = length, y = scalelength, color = lakeid)) +
+  geom_point(size = 3)
+
