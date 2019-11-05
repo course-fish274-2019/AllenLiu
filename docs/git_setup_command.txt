@@ -1,0 +1,2 @@
+ git config --global user.email "allentpe@uw.edu"
+ git config --global user.name "allentpe"
